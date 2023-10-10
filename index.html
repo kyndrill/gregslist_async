@@ -10,6 +10,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
     integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>gregslist_async</title>
@@ -33,6 +36,7 @@
           <!-- NAVLINKS -->
           <a href="#/about" class="nav-link">About</a>
           <a href="#/cars" class="nav-link">Cars</a>
+          <a href="#/houses" class="nav-link">Houses</a>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -45,7 +49,82 @@
 
     <section id="router-view">
       <!-- primary viewport -->
+      <div class="container-fluid p-4">
+        <section class="row">
+          <div class="col-12">
+            <h1>Houses</h1>
+          </div>
+        </section>
+        <section class="row">
+          <div class="col-12">
+            <section id="houseForm" class="row">
 
+            </section>
+          </div>
+
+          <div class="col-12">
+            <section id="houseCard" class="row">
+
+
+              <div class="col-12 p-4">
+                <form onsubmit="app.HousesController.createHouse(event)">
+
+                  <div class="mb-2">
+                    <label for="bedrooms">Bedrooms</label>
+                    <input id="bedrooms" type="text" required maxlength="2" name="bedrooms"
+                      placeholder="Number of Bedrooms">
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="bathrooms">Bathrooms</label>
+                    <input id="bathrooms" type="text" required maxlength="2" name="bathrooms"
+                      placeholder="Number of Bathrooms">
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="levels">Levels</label>
+                    <input id="levels" type="text" required maxlength="2" placeholder="Levels" name="levels">
+                  </div>
+
+
+                  <div class="mb-2">
+                    <label for="imgUrl">Image URL</label>
+                    <input id="imgUrl" type="url" maxlength="500" name="imgUrl" placeholder="House ImgUrl...">
+                  </div>
+
+
+                  <div class="mb-2">
+                    <label for="year">Year</label>
+                    <input id="year" type="text" name="year" required maxlength="4" placeholder="Year Built">
+                  </div>
+
+
+                  <div class="mb-2">
+                    <label for="price">Price</label>
+                    <input id="price" type="text" required name="price" minlength="0" maxlength="1000000000">
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" rows="5" placeholder="Describe your house!"
+                      maxlength="5000"></textarea>
+                  </div>
+
+
+                  <div>
+                    <button class="btn btn-success" type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+
+
+
+
+            </section>
+          </div>
+        </section>
+      </div>
     </section>
 
 

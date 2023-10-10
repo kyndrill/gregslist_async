@@ -1,20 +1,41 @@
 /* BASIC STYLES HERE */
-label{
+label {
   display: block;
 }
 
-input{
-  width: 100%;
+input {
+  width: 20%;
 }
-.car-creator{
+
+textarea {
+  width: 20%;
+}
+
+.cabin-font {
+  font-family: 'Cabin', sans-serif;
+}
+
+.car-creator {
   height: 10vh;
   width: 10vh;
   object-fit: cover;
 }
 
-.car-img{
+.car-img {
   height: 50vh;
   width: 50vw;
   object-fit: cover;
   object-position: center;
+}
+
+.house-img {
+  height: 50vh;
+  width: 35vw;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 40px;
+}
+
+.user-img {
+  height: 10vh;
 }
